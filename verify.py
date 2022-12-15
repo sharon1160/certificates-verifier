@@ -196,15 +196,13 @@ def get_trust_stores():
   '''
   Función retorna los trusts stores de los 3 navegadores
   '''
-  microsoft_edge = read_csv_certificates("verifierApp/static/data/Microsoft_Edge.csv")
-  google_chrome = read_pem_certificates("verifierApp/static/data/Google_Chrome.pem")
-  mozilla_firefox = read_pem_certificates("verifierApp/static/data/Mozilla_Firefox.pem")
+  microsoft_edge = read_csv_certificates("static/data/Microsoft_Edge.csv")
+  google_chrome = read_pem_certificates("static/data/Google_Chrome.pem")
+  mozilla_firefox = read_pem_certificates("static/data/Mozilla_Firefox.pem")
 
   microsoft_edge = structure_trust_store(microsoft_edge)
   google_chrome = structure_trust_store(google_chrome)
   mozilla_firefox = structure_trust_store(mozilla_firefox)
 
   return microsoft_edge, google_chrome, mozilla_firefox
-
-
 
